@@ -228,7 +228,26 @@ public class ABRTestPourEtudiants {
 		a1.fusion(a2);
 		
 		assertEquals("1, 2, 3, 4, 5, 8, ", a1.toString());
-		
+
+
+
+		ArbreMot am1 = new ArbreMot(new StringData("a"));
+		am1.insertionFeuille(new StringData("b"));
+		am1.insertionFeuille(new StringData("d"));
+		am1.insertionFeuille(new StringData("c"));
+
+
+		ArbreMot am2 = new ArbreMot(new StringData("e"));
+		am2.insertionFeuille(new StringData("a"));
+		am2.insertionFeuille(new StringData("g"));
+		am2.insertionFeuille(new StringData("f"));
+
+
+		// Test de fusion avec un type different
+		am1.fusion(a1);
+
+		am1.fusion(am2);
+		assertEquals("a, b, c, d, e, f, g, ", am1.toString());
 	}
 
 	

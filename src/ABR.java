@@ -81,7 +81,7 @@ public class ABR<T extends Donnee>{
 	 */
 	public void insertionFeuille(Donnee d) {
 
-		if(this.recherche(d) != null) {
+		if(this.recherche(d) != null || d.getClass() != this.donnee.getClass()) {
 			return;
 		}
 
