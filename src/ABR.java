@@ -383,4 +383,32 @@ public class ABR<T extends Donnee>{
 
 
 
+	public void fusion(ABR<T> x) {
+
+		ABR<T> r = this;
+
+
+		if(x != null) {
+
+			r.insertionFeuille(x.donnee);
+
+			if(x.filsGauche != null) {
+				r.insertionFeuille(x.filsGauche.donnee);
+				this.fusion(x.filsGauche);
+			}
+
+			if(x.filsDroit != null) {
+				r.insertionFeuille(x.filsDroit.donnee);
+				this.fusion(x.filsDroit);
+			}
+
+		}
+
+
+
+
+
+	}
+
+
 }

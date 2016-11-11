@@ -207,7 +207,7 @@ public class ABRTestPourEtudiants {
 	}
 
 
-/*
+
 	@Test
 	public void fusion(){
 		
@@ -230,7 +230,7 @@ public class ABRTestPourEtudiants {
 		assertEquals("1, 2, 3, 4, 5, 8, ", a1.toString());
 		
 	}
-*/
+
 	
 	
 	
