@@ -305,15 +305,6 @@ public class ABR<T extends Donnee>{
 	}
 
 
-	public ABR getSousArbreGauche() {
-		return(this.filsGauche);
-	}
-
-	public ABR getSousArbreDroit() {
-		return(this.filsDroit);
-	}
-
-
 	public void suppression(String cle) {
 
 		ABR x = this.recherche(cle);
@@ -488,6 +479,66 @@ public class ABR<T extends Donnee>{
 		this.rotationGauche();
 	}
 
+
+	public int desequilibre() {
+
+		// TODO: 12/11/16 - Fix function and test
+
+		int hG = 1;
+
+		if(this.filsGauche != null) {
+			hG += this.filsGauche.hauteur();
+		}
+
+
+		int hD = 1;
+
+		if(this.filsDroit != null) {
+			hD += this.filsDroit.hauteur();
+		}
+
+
+		int desequilibre = hG - hD;
+
+		return desequilibre;
+	}
+
+
+	public void reequilibrage() {
+
+		ABR r = this;
+
+		if(r == null) {
+			return;
+		}
+
+
+		// TODO: 12/11/16 - Write algo and test
+		/*if(r.desequilibre() == 2 && r.filsGauche != null && r.filsGauche.desequilibre() == 1) {
+			r.rotationDroite();
+		} else if(r.desequilibre() == 2 && r.filsDroit != null && r.filsDroit.desequilibre() == -1){
+			r.rotationGauche();
+		} else if(r.desequilibre() == 2 && r.filsGauche != null && r.filsGauche.desequilibre() == -1){
+			r.rotationGaucheDroite();
+		} else if(r.desequilibre() == -2 && r.filsDroit != null && r.filsDroit.desequilibre() == 1){
+			r.rotationDroiteGauche();
+		}*/
+
+
+	}
+
+
+	public void insertionFeuilleEquilibre(Donnee d) {
+
+		// TODO: 12/11/16 - Write algo and test
+		/*this.insertionFeuille(d);
+
+		if(Math.abs(this.desequilibre()) > 1) {
+			System.out.println("Equilibrage après insertion...");
+			this.reequilibrage();
+		}*/
+
+	}
 
 
 }

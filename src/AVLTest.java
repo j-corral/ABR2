@@ -104,7 +104,7 @@ public class AVLTest {
 		
 	}
 	
-	/*@Test
+	@Test
 	public void desequilibre(){
 
 		ArbreMot b = new ArbreMot(new StringData("b")); 
@@ -119,9 +119,9 @@ public class AVLTest {
 		
 		// Ajouter vos tests
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void reequilibrage(){
 
 		ArbreMot d = new ArbreMot(new StringData("d")); 
@@ -139,12 +139,12 @@ public class AVLTest {
 		// Ajouter vos tests
 		
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void insertionFeuilleEquilibre(){
 		
-		TYPE4 racine = new TYPE4(new StringData("f")); 
+		ABR racine = new ArbreMot(new StringData("f"));
 		racine.insertionFeuilleEquilibre(new StringData("e"));
 		racine.insertionFeuilleEquilibre(new StringData("d"));
 		racine = racine.pere;
@@ -166,6 +166,6 @@ public class AVLTest {
 		assertEquals(f2.hauteur(), racine.hauteur() + 3);
 		
 		// Ajouter vos tests
-	}*/
+	}
 
 }
