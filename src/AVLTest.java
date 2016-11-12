@@ -20,26 +20,26 @@ public class AVLTest {
 	}
 
 
-	/*@Test
+	@Test
 	public void rotationDroite(){
 
-		ArbreMot d = new ArbreMot(new StringData("d")); 
+		ArbreMot d = new ArbreMot(new StringData("d"));
 		d.insertionFeuille(new StringData("b"));
 		d.insertionFeuille(new StringData("a"));
 		d.insertionFeuille(new StringData("c"));
 		d.insertionFeuille(new StringData("e"));
 
-		Object b = d.recherche("b"); 
-				
-		d.rotationDroite();
-		
+		Object b = d.recherche("b");
+
+		d.rotationDroite(); //System.out.println(b);
+
 		assertEquals(d.pere, b);
 		
 		// Ajouter vos tests
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void rotationGauche(){
 		
 		ArbreMot b = new ArbreMot(new StringData("b")); 
@@ -56,12 +56,12 @@ public class AVLTest {
 		
 		// Ajouter vos tests
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void rotationGaucheDroite(){
 
-		TYPE4 racine = new ArbreMot(new StringData("f"));
+		ABR racine = new ArbreMot(new StringData("f"));
 		
 		racine.insertionFeuille(new StringData("b"));
 		racine.insertionFeuille(new StringData("a"));
@@ -79,12 +79,12 @@ public class AVLTest {
 		
 		// Ajouter vos tests
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void rotationDroiteGauche(){
 
-		TYPE4 racine = new ArbreMot(new StringData("b"));
+		ABR racine = new ArbreMot(new StringData("b"));
 		
 		racine.insertionFeuille(new StringData("a"));
 		racine.insertionFeuille(new StringData("f"));
@@ -102,7 +102,7 @@ public class AVLTest {
 		
 		// Ajouter vos tests
 		
-	}*/
+	}
 	
 	/*@Test
 	public void desequilibre(){

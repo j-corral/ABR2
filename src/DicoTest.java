@@ -13,7 +13,7 @@ public class DicoTest {
     @Test
     public void testChargement() throws IOException {
 
-        Dico dico = new Dico(new DonneeString(""));
+        Dico dico = new Dico(new DonneeString("a"));
 
         dico.chargerMots("francais", 10);
 

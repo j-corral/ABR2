@@ -8,6 +8,8 @@ public class ABR<T extends Donnee>{
 	ABR pere;
 	ABR filsGauche, filsDroit;
 
+	static StringBuffer str = new StringBuffer();
+
 
 	public ABR(T donnee) {
 		//super();
@@ -18,21 +20,30 @@ public class ABR<T extends Donnee>{
 	@Override
 	public String toString() {
 
-		StringBuffer str = new StringBuffer();
+		ABR r = this;
 
+		if(str.length() >= str.capacity()) {
+			str.ensureCapacity(str.length() * 2);
+		}
 
-		if(this.filsGauche != null) {
-			str.append(this.filsGauche.toString());
+		if(r.filsGauche != null) {
+			str.append(r.filsGauche.toString());
 		}
 
 		// concatener string
-		str.append(this.donnee.getCle() + ", ");
-
-		if(this.filsDroit != null) {
-			str.append(this.filsDroit.toString());
+		if(r != null) {
+			str.append(r.donnee.getCle() + ", ");
 		}
 
-		return str.toString();
+		if(r.filsDroit != null) {
+			str.append(r.filsDroit.toString());
+		}
+
+
+		String full = str.toString();
+		str.setLength(0);
+
+		return full;
 	}
 
 
@@ -150,6 +161,7 @@ public class ABR<T extends Donnee>{
 
 		}
 
+
 		if(x == null) {
 			return null;
 		}
@@ -245,7 +257,7 @@ public class ABR<T extends Donnee>{
 	/**
 	 * @return la hauteur de l'arbre
 	 */
-	public int hauteur() {
+	/*public int hauteur() {
 
 		ABR a = this;
 
@@ -263,6 +275,42 @@ public class ABR<T extends Donnee>{
 		}
 
 		return Math.max(hLeft, hRight);
+	}*/
+
+	/**
+	 * @return la hauteur de l'arbre
+	 */
+	public int hauteur() {
+
+		ABR a = this;
+
+		if (a == null) {
+			return 1;
+		}
+		else {
+
+			int hG = 1;
+			int hD = 1;
+
+			if(a.filsGauche != null) {
+				hG += a.filsGauche.hauteur();
+			}
+
+			if(a.filsDroit != null) {
+				hD += a.filsDroit.hauteur();
+			}
+
+			return (Math.max(hG, hD));
+		}
+	}
+
+
+	public ABR getSousArbreGauche() {
+		return(this.filsGauche);
+	}
+
+	public ABR getSousArbreDroit() {
+		return(this.filsDroit);
 	}
 
 
@@ -409,6 +457,37 @@ public class ABR<T extends Donnee>{
 
 
 	}
+
+
+	public void rotationDroite() {
+
+		this.pere = this.filsGauche;
+		this.filsGauche.filsDroit = this;
+		this.filsGauche = null;
+
+	}
+
+
+	public void rotationGauche() {
+
+		this.pere = this.filsDroit;
+		this.filsDroit.filsGauche = this;
+		this.filsDroit = null;
+
+	}
+
+
+	public void rotationGaucheDroite() {
+		this.filsGauche.rotationGauche();
+		this.rotationDroite();
+	}
+
+
+	public void rotationDroiteGauche() {
+		this.filsDroit.rotationDroite();
+		this.rotationGauche();
+	}
+
 
 
 }

@@ -27,12 +27,6 @@ public abstract class Donnee implements Comparable<Donnee>{
 	public String toString() {
 		return "Donnee [cle=" + cle + "]";
 	}
-
-
-	/*public Donnee(String donnee) {
-		super();
-		this.setCle(donnee);
-	}*/
 	
 	
 	
