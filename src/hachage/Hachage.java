@@ -5,7 +5,7 @@ import ABR.Donnee;
 /**
  * Created by jonathan on 15/11/16.
  */
-public abstract class Hachage<T extends Donnee> {
+public abstract class Hachage<T extends HashDonnee> {
 
     int m;
 
