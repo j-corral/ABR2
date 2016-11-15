@@ -1,3 +1,4 @@
+package ABR;
 
 public abstract class Donnee implements Comparable<Donnee>{
 
@@ -25,7 +26,7 @@ public abstract class Donnee implements Comparable<Donnee>{
 
 	@Override
 	public String toString() {
-		return "Donnee [cle=" + cle + "]";
+		return "ABR.Donnee [cle=" + cle + "]";
 	}
 	
 	

@@ -1,15 +1,12 @@
 package hachage.hachageCollision;
 
-import static org.junit.Assert.*;
-
+import ABR.DonneeString;
 import org.junit.Test;
-
-import ABR.DonneeMot;
 
 public class HachageCollisionTest {
 	
 //	Remplacer TYPE1 par une classe issue de votre modélisation représentant une donnée chaîne de caractères
-	public class StringData extends TYPE1{
+	public class StringData extends DonneeString{
 
 		public StringData(String donnee) {
 			super(donnee);

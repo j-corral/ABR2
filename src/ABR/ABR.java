@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package ABR;
+
 import java.util.Arrays;
 
 public class ABR<T extends Donnee>{
@@ -117,7 +118,7 @@ public class ABR<T extends Donnee>{
 
 	/**
 	 * Recherche une donnée dans l'arbre
-	 * @param key : Donnee
+	 * @param key : ABR.Donnee
 	 * @return
 	 */
 	public ABR recherche(Donnee key) {
@@ -259,7 +260,7 @@ public class ABR<T extends Donnee>{
 	 */
 	/*public int hauteur() {
 
-		ABR a = this;
+		ABR.ABR a = this;
 
 		int hLeft = 1;
 

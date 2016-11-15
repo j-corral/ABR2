@@ -1,3 +1,5 @@
+package ABR;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -18,7 +20,7 @@ public class ABRTestPourEtudiants {
 		}
 	}
 
-//  Remplacer TYPE3 par une classe issue de votre modélisation représentant un ABR contenant des données entières	
+//  Remplacer TYPE3 par une classe issue de votre modélisation représentant un ABR.ABR contenant des données entières
 	public class ArbreEntier extends ABR{
 			
 		public ArbreEntier(IntData data) {
@@ -26,7 +28,7 @@ public class ABRTestPourEtudiants {
 		}
 	}
 
-//  Remplacer TYPE4 par une classe issue de votre modélisation représentant un ABR contenant des données sous forme de chaînes de caractères	
+//  Remplacer TYPE4 par une classe issue de votre modélisation représentant un ABR.ABR contenant des données sous forme de chaînes de caractères
 	public class ArbreMot extends ABR{
 		
 		public ArbreMot(StringData data) {

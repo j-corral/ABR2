@@ -1,3 +1,5 @@
+package ABR;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -11,7 +13,7 @@ public class AVLTest {
 		}
 	}
 
-//  Remplacer TYPE4 par une classe issue de votre modélisation représentant un ABR contenant des données sous forme de chaînes de caractères	
+//  Remplacer TYPE4 par une classe issue de votre modélisation représentant un ABR.ABR contenant des données sous forme de chaînes de caractères
 	public class ArbreMot extends ABR{
 		
 		public ArbreMot(StringData data) {
