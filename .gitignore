@@ -9,4 +9,4 @@ bin/*.class
 
 .classpath
 
-ABR2.iml
+*.iml
