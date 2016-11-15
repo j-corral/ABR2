@@ -3,10 +3,12 @@ package hachage;
 import ABR.DonneeString;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class HachageCollisionTest {
 	
 //	Remplacer TYPE1 par une classe issue de votre modélisation représentant une donnée chaîne de caractères
-	public class StringData extends DonneeString{
+	public class StringData extends HashDonneeString{
 
 		public StringData(String donnee) {
 			super(donnee);
@@ -15,7 +17,7 @@ public class HachageCollisionTest {
 	
 
 //  Remplacer TYPE2 par une classe issue de votre modélisation représentant une table de Hachage avec gestion de données par collision et contenant des données sous forme de chaînes de caractères	
-	public class HachageCollisionString extends TYPE2{
+	public class HachageCollisionString extends HachageCollision{
 
 		public HachageCollisionString(int m, int a) {
 			super(m, a);

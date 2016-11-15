@@ -9,7 +9,7 @@ import org.junit.Test;
 public class HachageDoubleTest {
 	
 //	Remplacer TYPE1 par une classe issue de votre modélisation représentant une donnée chaîne de caractères
-	public class StringData extends DonneeString{
+	public class StringData extends HashDonneeString{
 
 		public StringData(String donnee) {
 			super(donnee);
@@ -18,7 +18,7 @@ public class HachageDoubleTest {
 	
 
 //  Remplacer TYPE2 par une classe issue de votre modélisation représentant une table de Hachage avec gestion de collisions par hachage double et contenant des données sous forme de chaînes de caractères	
-	public class HachageDoubleString extends TYPE2{
+	public class HachageDoubleString extends HachageDouble{
 
 		public HachageDoubleString(int m, int k) {
 			super(m, k);

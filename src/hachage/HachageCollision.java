@@ -31,12 +31,27 @@ public class HachageCollision extends Hachage<HashDonnee> {
 
     @Override
     public int h(HashDonnee d) {
-        return 0;
+
+        int x = 0;
+
+        for (int i = 0; i < d.getCle().length(); ++i) {
+
+            Character ch = new Character(d.getCle().charAt(i));
+
+            x += ch.hashCode() * Math.pow(this.a, i);
+
+        }
+
+
+
+        return x % this.m;
     }
 
 
-    public String getListSize() {
+    public String getListsSize() {
 
-        return "";
+        String str = this.m + " entrée(s) contenant 0 élément(s)\n";
+
+        return str;
     }
 }
