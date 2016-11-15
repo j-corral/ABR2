@@ -1,4 +1,4 @@
-package hachage.hachageDouble;
+package hachage;
 
 import static org.junit.Assert.assertEquals;
 

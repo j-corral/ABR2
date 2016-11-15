@@ -9,8 +9,6 @@ public abstract class Hachage<T extends Donnee> {
 
     int m;
 
-    T donnee;
-
     public Hachage(int m) {
 
         this.m = m;

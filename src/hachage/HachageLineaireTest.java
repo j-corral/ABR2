@@ -1,4 +1,4 @@
-package hachage.hachageLineaire;
+package hachage;
 
 import ABR.DonneeString;
 import org.junit.Test;
