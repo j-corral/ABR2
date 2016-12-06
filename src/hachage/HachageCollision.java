@@ -2,8 +2,7 @@ package hachage;
 
 import ABR.Donnee;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by jonathan on 15/11/16.
@@ -12,20 +11,51 @@ public class HachageCollision extends Hachage<HashDonnee> {
 
     int a;
 
-    ArrayList<HashDonnee> t = new ArrayList<HashDonnee>();
+    ArrayList<ArrayList<HashDonnee>> table;
+
 
     public HachageCollision(int m, int a) {
         super(m);
         this.a = a;
+
+        this.table = new ArrayList<ArrayList<HashDonnee>>();
+
+
+        for (int i = 0; i < m;++i) {
+            table.add(new ArrayList<HashDonnee>());
+        }
+
+
+        //System.out.println("Table created");
     }
 
     @Override
     public void add(HashDonnee d) {
 
+        int h = this.h(d);
+
+        //System.out.println("Create new hashDonnee(" + d + ") at: " + h + " - Existe? " + this.recherche(d));
+
+        if (!this.recherche(d)) {
+            table.get(h).add(d);
+        }
+
     }
 
     @Override
     public boolean recherche(HashDonnee d) {
+
+        int h = this.h(d);
+
+        for (HashDonnee item: table.get(h)) {
+
+            if(item.getCle() == d.getCle()) {
+                return true;
+            }
+
+        }
+
+
         return false;
     }
 
@@ -50,8 +80,34 @@ public class HachageCollision extends Hachage<HashDonnee> {
 
     public String getListsSize() {
 
-        String str = this.m + " entrée(s) contenant 0 élément(s)\n";
+        Map<Integer, Integer> count = new HashMap<Integer, Integer>();
 
-        return str;
+        StringBuffer str = new StringBuffer();
+
+        // parcours de table
+        for (ArrayList<HashDonnee> pos: table) {
+
+            int nb = pos.size();
+
+            if(count.get(nb) != null) {
+                count.put(nb, count.get(nb) + 1);
+            } else {
+                count.put(nb, 1);
+
+            }
+
+        }
+
+
+        for(Map.Entry<Integer, Integer> entry : count.entrySet()) {
+            Integer key = entry.getKey();
+            Integer value = entry.getValue();
+
+            //System.out.print(value + " entrée(s) contenant " + key + " élément(s)\n");
+            str.append(value + " entrée(s) contenant " + key + " élément(s)\n");
+        }
+
+
+        return str.toString();
     }
 }
