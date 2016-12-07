@@ -3,34 +3,57 @@ package hachage;
 import java.util.ArrayList;
 
 /**
- * Created by jonathan on 15/11/16.
+ * Created by kenny on 07/12/16.
  */
 public class HachageLineaire extends Hachage<HashDonnee> {
 
 
-    ArrayList<HashDonnee> table = new ArrayList<HashDonnee>();
+    ArrayList<ArrayList<HashDonnee>> table;
 
     public HachageLineaire(int m) {
         super(m);
+
+        this.table = new ArrayList<ArrayList<HashDonnee>>();
+
+
+        for (int i = 0; i < m;++i) {
+            table.add(new ArrayList<HashDonnee>());
+        }
     }
 
     @Override
     public void add(HashDonnee d) {
 
+        int h = this.h(d);
+
+        if (!this.recherche(d)) {
+            table.get(h).add(d);
+        }
     }
 
     @Override
     public boolean recherche(HashDonnee d) {
+
+        int h = this.h(d);
+
+        for (HashDonnee item: table.get(h)) {
+
+            if(item.getCle() == d.getCle()) {
+                return true;
+            }
+        }
+
         return false;
     }
 
     @Override
     public int h(HashDonnee d) {
-        return 0;
+
+        return Math.abs(d.hashCode()) % this.m;
     }
 
 
-    public String getListsSize() {
+    public String toString() {
 
 
         for (Object data: table) {
