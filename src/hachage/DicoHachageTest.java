@@ -16,41 +16,21 @@ import static org.junit.Assert.assertTrue;
 public class DicoHachageTest {
 
     @Test
-    public void testChargemenArticle() throws IOException {
+    public void testChargementArticle() throws IOException {
 
         DicoHachage dico = new DicoHachage(30000, 3);
 
         dico.chargerMots("francais", 0);
-        assertEquals(true, dico.recherche(new HashDonneeString("gitan")));
+        System.out.println(dico.getListsSize() + "\n");
 
+        assertEquals(true, dico.recherche(new HashDonneeString("quintessence")));
+        assertEquals(false, dico.recherche(new HashDonneeString("trumper")));
 
         dico.lireFichier("ArticleLeMonde");
-
         dico.comparerMots();
-
-        //System.out.println("poubelle ? " + dico.recherche(new HashDonneeString("poubelle")));
-
-        //System.out.println(dico.getListsSize());
-
 
 
     }
-
-
-
-    /*@Test
-    public void recherche() throws IOException {
-
-        Dico dico = new Dico(new DonneeString(""));
-
-        dico.chargerMots("francais", 10);
-
-        Dico test = new Dico(new DonneeString("abaissant"));
-
-        assertEquals(null, dico.recherche("gitan"));
-        assertEquals(test.toString(), dico.recherche("abaissant").toString());
-
-    }*/
 
 
 }
