@@ -2,8 +2,7 @@
 
 .settings/
 
-!bin/
-bin/*/*.class
+bin/*
 
 .project
 
