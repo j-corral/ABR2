@@ -16,14 +16,19 @@ import static org.junit.Assert.assertTrue;
 public class DicoHachageTest {
 
     @Test
-    public void testChargement() throws IOException {
+    public void testChargemenArticle() throws IOException {
 
-        DicoHachage dico = new DicoHachage(300, 10);
+        DicoHachage dico = new DicoHachage(1000000, 3);
 
-        dico.chargerMots("francais", 30000);
+        dico.chargerMots("francais", 0);
 
+        dico.lireFichier("ArticleLeMonde");
 
-        System.out.println("bellicisme ? " + dico.recherche(new HashDonneeString("bellicisme")));
+        //System.out.print(dico.getListsSize());
+
+        dico.comparerMots();
+
+        //System.out.println("poubelle ? " + dico.recherche(new HashDonneeString("poubelle")));
 
         //System.out.println(dico.toString());
 

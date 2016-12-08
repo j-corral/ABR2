@@ -31,9 +31,23 @@ public abstract class HashDonnee implements Comparable<HashDonnee>{
 	public String toString() {
 		return "Hash.Donnee [cle=" + cle + "]";
 	}
-	
-	
-	
+
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (obj == this) {
+			return true;
+		}
+
+		if (!(obj instanceof HashDonnee)) {
+			return false;
+		}
+
+		HashDonnee other = (HashDonnee) obj;
+
+		return cle == other.cle;
+	}
 	
 	
 	
