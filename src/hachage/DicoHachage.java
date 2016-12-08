@@ -101,7 +101,8 @@ public class DicoHachage extends HachageCollision {
 
 
         String path = nom + ".fr";
-        String encoding = "iso-8859-1";
+//        String encoding = "iso-8859-1";
+        String encoding = "UTF-8";
 
         FileInputStream inputStream = null;
         Scanner sc = null;
@@ -131,7 +132,7 @@ public class DicoHachage extends HachageCollision {
                 for ( String word : arr) {
 
                     words.add(new HashDonneeString(word.toLowerCase()));
-                    //System.out.println(ss);
+//                    System.out.println(word);
 
                 }
 

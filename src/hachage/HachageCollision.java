@@ -47,19 +47,18 @@ public class HachageCollision extends Hachage<HashDonnee> {
 
         int h = this.h(d);
 
-        //System.out.print(table.toString() + " -- " + d.getCle().toString());
-        //System.out.println("? " + table.get(h).contains(d));
+        if(table.get(h).size() > 0) {
 
-        /*for (HashDonnee item: table.get(h)) {
+            for (HashDonnee item: table.get(h)) {
 
-            if(item.getCle() == d.getCle()) {
-                return true;
+                if(item.getCle().equals(d.getCle())) {
+                    //System.out.println(d);
+                    return true;
+                }
+
             }
 
-        }*/
 
-        if(table.get(h).contains(d)) {
-            return true;
         }
 
         return false;

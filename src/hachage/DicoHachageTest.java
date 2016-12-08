@@ -18,19 +18,19 @@ public class DicoHachageTest {
     @Test
     public void testChargemenArticle() throws IOException {
 
-        DicoHachage dico = new DicoHachage(1000000, 3);
+        DicoHachage dico = new DicoHachage(30000, 3);
 
         dico.chargerMots("francais", 0);
+        assertEquals(true, dico.recherche(new HashDonneeString("gitan")));
+
 
         dico.lireFichier("ArticleLeMonde");
-
-        //System.out.print(dico.getListsSize());
 
         dico.comparerMots();
 
         //System.out.println("poubelle ? " + dico.recherche(new HashDonneeString("poubelle")));
 
-        //System.out.println(dico.toString());
+        //System.out.println(dico.getListsSize());
 
 
 
