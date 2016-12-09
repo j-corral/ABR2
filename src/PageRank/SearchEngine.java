@@ -10,7 +10,7 @@ public class SearchEngine {
 
     private HashMap<String, WebPage> pages;
 
-    // un MyDataStructure contenant l’ensemble des mots-cl´es figurant dans index small.txt (ou index.txt suivant les cas) ;
+    private MyDataStructure keywords;
 
     private String pathInputFiles;
 
