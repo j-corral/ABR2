@@ -1,5 +1,6 @@
 package PageRank;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class SearchEngine {
     private String pathOutputFiles;
 
 
+    public SearchEngine() {} // default constructor
+
     public SearchEngine(String pif, String pof) {
         this.pathInputFiles = pif;
         this.pathOutputFiles = pof;
@@ -27,18 +30,29 @@ public class SearchEngine {
 
     }
 
-    public void readKeyWord() {
+    public void readKeyWords() {
 
     }
 
-    /*public void HashMap<String, WebPage> getSearchSubGraph(List<String> graph) {
+    public HashMap<String, WebPage> getWebpages() {
 
+        HashMap<String, WebPage> map = new HashMap<String, WebPage>();
+
+        return map;
+    }
+
+    // TODO !
+    /*
+    public List<WebPage> getSearchSubGraph(List<String> graph) {
+        List<WebPage> list = new ArrayList<String>();
+
+        return list;
     }
 
     public void computeRanks(List<WebPage>, List<String>) {
 
-    }*/
-
+    }
+    */
 
 
 }

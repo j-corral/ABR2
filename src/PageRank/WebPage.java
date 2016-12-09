@@ -1,5 +1,6 @@
 package PageRank;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,18 +8,28 @@ import java.util.List;
  */
 public class WebPage {
 
-    private String adr;
+    private String url;
 
     private double rank;
 
-    private List<WebPage> list1; // TO RENAME !
-    private List<WebPage> list2; // TO RENAME !
+    private List<WebPage> listReferTo;
+    private List<WebPage> listReachFrom;
 
 
-    public WebPage(String adr) {
-        this.adr = adr;
+    public WebPage(String url) {
+        this.url = url;
     } // constructor
 
 
+    public ArrayList getInputArc() {
+        ArrayList arrayList = new ArrayList();
 
+        return arrayList;
+    }
+
+    public ArrayList getOutputArc() {
+        ArrayList arrayList = new ArrayList();
+
+        return arrayList;
+    }
 }

@@ -89,7 +89,7 @@ public class PageRankTest {
 		 */
 		
 	}
-	
+	/*
 	@Test
 	public void readKeyWordsFile(){
 	
@@ -111,9 +111,11 @@ public class PageRankTest {
 		 	pock.hypotheses.org/date/2013/09.html
 		 	pock.hypotheses.org/index.html
 		 */
-		
+	/*
 	}
-	
+	*/
+
+	/*
 	@Test
 	public void createSubGraph(){
 		
@@ -133,9 +135,11 @@ public class PageRankTest {
 		 * www-test.univ-avignon.fr/fr/print/master-informatique.html
 		 * www-test.univ-avignon.fr/fr/print/doctorat-informatique.html
 		 */
-		
+	/*
 	}
-	
+	*/
+
+	/*
 	@Test
 	public void degreesSearchEngine(){
 
@@ -150,7 +154,9 @@ public class PageRankTest {
 		assertEquals(1, wp.getRank(), 1E-5);	
 		
 	}
-	
+	*/
+
+	/*
 	@Test
 	public void normalizedDegreesSearchEngine(){
 		
@@ -169,7 +175,9 @@ public class PageRankTest {
 		assertEquals(0.0909090, wp.getRank(), 1E-5);		
 		
 	}
-	
+	*/
+
+	/*
 	@Test
 	public void pageRankSearchEngine(){
 		
@@ -191,11 +199,12 @@ public class PageRankTest {
 		assertEquals(4.4873480260724234E-7, wp.getRank(), 1E-10);
 				
 	}
+	*/
 
-	
+	/*
 	@Test
 	public void fichierIndexComplet(){
 		//Test utilisant le fichier "index.txt"
 	}
-		
+	*/
 }

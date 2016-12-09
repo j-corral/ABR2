@@ -20,5 +20,5 @@ public class MyDataStructure extends HachageCollision{
 			DataKeyWord data = new DataKeyWord();
 			return data;
 	 	}
-	
+
 }

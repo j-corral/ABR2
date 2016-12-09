@@ -8,7 +8,9 @@ import java.util.List;
  */
 public class DataKeyWord extends HashDonnee {
 
-    private List<String> list;
+    private List<String> listMentionedBy;
 
+
+    public DataKeyWord() {} // default constructor
 
 }
