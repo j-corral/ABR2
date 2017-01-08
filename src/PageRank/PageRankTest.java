@@ -27,7 +27,7 @@ public class PageRankTest {
 	public void readWebPagesFile(){
 		
 		HashMap<String, WebPage> hm = bing.getWebpages();
-		
+
 		assertTrue(hm.containsKey("purl.org/metadata/dublin_core_elements"));
 		assertTrue(hm.containsKey("plus.franceculture.fr/partenaires/avignon-et-pays-de-vaucluse"));
 		assertTrue(hm.containsKey("www.dokuwiki.org/fr:namespaces"));
